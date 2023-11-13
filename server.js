@@ -3,10 +3,12 @@ const fileUpload = require('express-fileupload');
 const pdfParse = require('pdf-parse');
 const {getFormattedText} = require('./functions/helpers');
 const getObject = require('./functions/getObject');
+const cors = require("cors");
 
 const PORT = process.env.PORT || 3000;
 const app = express(); 
 
+app.use(cors());
 app.use(express.json());
 app.use(fileUpload());
 
