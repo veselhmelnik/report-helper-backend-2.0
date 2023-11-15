@@ -3,14 +3,14 @@ const areaReg = /(?<=Living Area:) \d{2,7}ft./gm;
 const floorReg = /\d{1,2}.(?=Floors)/gm;
 const bedroomsReg = /\d{1,2}.(?=Bedrooms)/gm;
 const bathesReg = /(?<=Bedrooms)(.*)(?=Bathroom)/gm;
-const floorNameOtherReg = /Other Structure \d\/(.*)(?= RoomFloor)/;
-const floorTypeOtherReg = /\D{11} (?=Other Structure \d\/(.*)(?= RoomFloor))/;
-const floorNameDwellingReg = /Dwelling \d.NA\/(.*\s)(?=RoomFloor)/g
-const floorTypeDwellingReg = /\D{12} (?=Dwelling \d.NA\/)/g;
-const floorNameRoofReg = /Dwelling \d.NA\/(.*\s)(?=RoomFloor)/g
+const floorNameOtherReg = /Other Structure \d*\/(.*)(?= RoomFloor)/;
+const floorTypeOtherReg = /\D{11} (?=Other Structure \d*\/(.*)(?= RoomFloor))/;
+const floorNameDwellingReg = /Dwelling \d*\/(.*\s)(?=RoomFloor)/g;
+const floorTypeDwellingReg = /\D{12} (?=Dwelling \d*\/)/g;
+const floorNameRoofReg = /Dwelling \d*\/(.*\s)(?=RoomFloor)/g;
 const floorTypeRoofReg = /Roof/;
-const floorNameAtticReg = /Dwelling \d.NA\/(.*\s)(?=RoomFloor)/g
-const floorTypeAtticReg = /\D{20} (?=Dwelling \d.NA\/)/g;
+const floorNameAtticReg = /Dwelling \d*\/(.*\s)(?=RoomFloor)/g;
+const floorTypeAtticReg = /\D{20} (?=Dwelling \d*\/)/g;
 const roomsReg = /\D{1,16}-\d\d/gm;
 const aboveFloorReg = /Dwelling \w\/NA\/Above Grade \w/;
 const belowFloorReg = /Dwelling \w\/NA\/Below Grade \w/;
