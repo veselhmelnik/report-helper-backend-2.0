@@ -1,7 +1,6 @@
 const { nameAndTypeReg } = require("../../regularExpressions");
 
 function nameAndType(text, nameReg, typeReg) {
-  console.log(text);
   return {
     floorName: text.match(nameReg)[0],
     floorType: text.match(typeReg)[0],

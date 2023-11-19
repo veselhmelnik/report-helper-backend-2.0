@@ -12,10 +12,10 @@ const floorTypeRoofReg = /Roof/;
 const floorNameAtticReg = /Dwelling \d*\/(.*\s)(?=RoomFloor)/g;
 const floorTypeAtticReg = /\D{20} (?=Dwelling \d*\/)/g;
 const roomsReg = /\D{1,16}-\d\d/gm;
-const aboveFloorReg = /Dwelling \w\/NA\/Above Grade \w/;
-const belowFloorReg = /Dwelling \w\/NA\/Below Grade \w/;
-const atticFloorReg = /Dwelling \w\/NA\/Attic/;
-const OtheStructureFloorReg = /Other Structure \w\/NA\//;
+const aboveFloorReg = /Dwelling \w*\/NA\/Above Grade \w/;
+const belowFloorReg = /Dwelling \w*\/NA\/Below Grade \w/;
+const atticFloorReg = /Dwelling \w*\/NA\/Attic/;
+const OtheStructureFloorReg = /Other Structure \w*\/NA\//;
 
 const nameAndTypeReg = {
     floorNameOtherReg,
