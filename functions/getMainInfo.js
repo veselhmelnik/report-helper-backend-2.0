@@ -6,7 +6,7 @@ const POST_URL = '_rb/?fromHomePage=true&shouldFireSellPageImplicitClaimGA=false
 
 function getMainInfo(text) {
   const {addressReg, areaReg, floorReg, bedroomsReg, bathesReg} = mainInfoReg;
-  
+  console.log(text);
     const address = parseString(text, addressReg);
     const area = parseString(text, areaReg);
     const floors = parseString(text, floorReg);

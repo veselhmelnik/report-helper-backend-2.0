@@ -1,6 +1,6 @@
 const addressReg = /(?<=Property Report - )(.*)(?= Report Generated)/gm;
 const areaReg = /(?<=Living Area:) \d{2,7}ft./gm;
-const floorReg = /\d{1,2}.(?=Floors)/gm;
+const floorReg = /\d{1,2}.(?=Floor)/gm;
 const bedroomsReg = /\d{1,2}.(?=Bedrooms)/gm;
 const bathesReg = /(?<=Bedrooms)(.*)(?=Bathroom)/gm;
 const floorNameOtherReg = /Other Structure \d*\/(.*)(?= RoomFloor)/;
