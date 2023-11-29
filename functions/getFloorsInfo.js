@@ -19,10 +19,9 @@ function getFloorsInfo(text) {
   for (let i = 1; i < text.length - 1; i++) {
     const rooms = text[i].match(roomsReg);
     let floorObj = mainInfo(rooms, text[i]);
-
     arr = [];
     rooms.map((room) => {
-      if (room.includes('ft')) {
+      if (room.includes(')') || room.includes('(')) {
         const reg = /[A-Z]\D{1,15}\d\d/;
         roomsArr.push(room.match(reg)[0].trim());
         arr.push(room.match(reg)[0].trim());
