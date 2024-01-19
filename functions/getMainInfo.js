@@ -10,7 +10,10 @@ function getMainInfo(text) {
     const area = parseString(text, areaReg);
     const floors = parseString(text, floorReg);
     const bedrooms = parseString(text, bedroomsReg);
-    const bathrooms = parseString(text, bathesReg);
+    let bathrooms = parseString(text, bathesReg);
+    if (isNaN(+bathrooms)) {
+      bathrooms = bathrooms.substring(1)
+    }
     const link = PRE_URL + address + POST_URL;
   
     return {
