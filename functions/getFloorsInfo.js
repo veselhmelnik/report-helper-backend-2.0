@@ -22,7 +22,7 @@ function getFloorsInfo(text) {
     arr = [];
     rooms.map((room) => {
       if (room.includes(')') || room.includes('(')) {
-        const reg = /[A-Z]\D{1,15}-\d\d/;
+        const reg = /[A-Z]\D{1,15}\d\d/;
         roomsArr.push(room.match(reg)[0].trim());
         arr.push(room.match(reg)[0].trim());
       } else {
